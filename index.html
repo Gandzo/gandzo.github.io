@@ -36,7 +36,7 @@
           <p>A human? A creator?<br>A receptacle for desires and apathy?</p>
         </div>
         </div>
-      <a class="main-down" href="#portfolio"><i class="icon-down"></i></a>
+      <a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
     </div>
 
     <div class="portfolio" id="portfolio">
@@ -134,6 +134,19 @@
                 var art = $(this).attr('data-work');
                 var modal = $('.modal');
                 modal.find('.modal-body').load(art+'.html');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            //навигация - плавный скроллинг к якорю
+            $(".slowly").on("click", function(event){
+             //отменяет стандартную обработку нажатия по ссылке
+                event.preventDefault();
+                var id = $(this).attr('href'),
+                top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 800);
+
             });
         });
     </script>
