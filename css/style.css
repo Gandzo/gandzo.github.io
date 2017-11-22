@@ -63,6 +63,10 @@
 	margin-left: -25px;
 	transition: 0.2s;
 }
+.main-down:visited {
+	 text-decoration: none;
+	 color: #fff;
+ }
 .main-down:hover {
 	color: #fff;
 	border-color: #fff;
